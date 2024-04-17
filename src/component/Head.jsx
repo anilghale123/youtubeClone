@@ -27,7 +27,8 @@ const Head = () => {
           part: 'snippet', 
           maxResults: 10, // Adjust number of results
           q: query,
-          key: API_KEY
+          key: API_KEY,
+          regionCode: 'US'
         }
       });
   

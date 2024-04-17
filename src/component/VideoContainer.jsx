@@ -20,7 +20,7 @@ const VideoContainer = () => {
     getVideos(); 
   }, []); 
 
-  console.log(videos);
+  
   const getVideos = async () => {
     const data = await fetch(youtubeApi);
     const json = await data.json();
@@ -28,11 +28,12 @@ const VideoContainer = () => {
     setVideoss(json.items);
   };
 
+  console.log(videos);
   return (
     <div className='flex flex-wrap'>
         {videos.length > 0 ? ( // If search results exist 
             videos.map((video) => ( 
-                <Link to={"/watch?v=" + video.id}> <VideoCard info={video} /> </Link>
+                <Link to={"/watch?v=" + video.id.videoId}> <VideoCard info={video} /> </Link>
             ))
         ) : ( // Otherwise, show popular videos
             videoss.map((video) => ( 
