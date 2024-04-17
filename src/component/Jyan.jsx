@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom'
 
 const Jyan = () => {
   return (
-    <div className=' p-5 flex'>
+    <div className=' p-5 flex bg-black text-white'>
       {/* this is body */}
       <SideBar />
       <Outlet />

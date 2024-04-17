@@ -16,6 +16,9 @@ import {
 } from "react-router-dom";
 import SideBar from "./component/SideBar";
 import WatchPage from "./component/WatchPage";
+import { VideoProvider } from "./component/VideoContext";
+
+
 
 const appRouter = createBrowserRouter([
   {
@@ -37,11 +40,11 @@ const appRouter = createBrowserRouter([
 function App() {
   return (
     <Provider store={store}>
-      <div>
+       <VideoProvider> 
+          <Head /> 
+          <RouterProvider router={appRouter} /> 
+          </VideoProvider>
        
-        <Head />
-        <RouterProvider router={appRouter} />
-      </div>
     </Provider>
   );
 }
