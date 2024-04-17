@@ -10,11 +10,13 @@ const Head = () => {
   return (
     <div className=' flex place-content-between p-4 shadow-lg' >
       
-      <div className='flex h-8 gap-2'>
+      <div className='flex h-8 gap-1'>
       <img onClick={() => toggleMenuHandler()}
+       className='h-6 mt-1 mr-2 ml-2'
        src = "/icons/menu.png"
         alt="menuIcon" />
       <img src="/icons/youtube.png" alt="youtubeLogo" />
+      <h1 className=' font-bold text-lg cursor-pointer'>YouTube</h1>
      </div>
 
     <div className='flex  h-8'>

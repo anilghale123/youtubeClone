@@ -9,7 +9,7 @@ const Jyan = () => {
       {/* this is body */}
       <SideBar />
       <Outlet />
-      <MainContainer />
+      {/* <MainContainer /> */}
     </div>
   )
 }

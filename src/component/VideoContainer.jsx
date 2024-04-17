@@ -7,7 +7,9 @@ const VideoContainer = () => {
   const youtubeApi = `https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&regionCode=US&maxResults=50&key=${apiKey}`;
 
    const[videos,setVideos] = useState([]);
-  useEffect(() => {
+  
+   useEffect(() => {
+    
     getVideos(); 
   }, []); 
 
@@ -22,9 +24,9 @@ const VideoContainer = () => {
     <div className='flex flex-wrap'>
       {videos.map((video) => ( 
      
-      <div> {/* Added a wrapping div */}
-          <VideoCard info={video} />
-      </div>
+     
+        <Link to={"/watch?v=" + video.id}>  <VideoCard info={video} /> </Link>
+     
   
       ))}
     </div>
